@@ -1,0 +1,19 @@
+import java.util.*;
+public class Solution {
+    
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        String input =scan.next();
+        char ch=input.charAt(0);
+     	if(Character.isUpperCase(ch))
+        {
+            System.out.print(1);
+        }
+        else if(Character.isLowerCase(ch))
+        {
+            System.out.print(0);
+        }
+        else 
+            System.out.print(-1);
+    }
+}
