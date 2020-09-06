@@ -31,7 +31,7 @@ a3b2cd2e5
 */
 public class Solution {
 
-	public static String compress(String inputString) {
+	public static String getCompressedString(String inputString) {
 		String str="";
         int count=1;
         str+=inputString.charAt(0);
@@ -58,3 +58,4 @@ public class Solution {
     
   }
 }
+
