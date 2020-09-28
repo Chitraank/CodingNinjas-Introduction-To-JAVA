@@ -32,7 +32,7 @@ public class solution {
             while(c<n-i){
             for(int j=0;j<input[i].length;j++){
                 System.out.print(input[i][j]+" ");
-               
+              
             } 
             c++;
             System.out.println();
