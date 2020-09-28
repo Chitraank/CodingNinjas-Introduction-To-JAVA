@@ -1,0 +1,64 @@
+/*
+                                                "Check Armstrong"
+Write a Program to determine if the given number is Armstrong number or not. Print true if number is armstrong, otherwise print false.
+An Armstrong number is a number (with digits n) such that the sum of its digits raised to nth power is equal to the number itself.
+For example,
+371, as 3^3 + 7^3 + 1^3 = 371
+1634, as 1^4 + 6^4 + 3^4 + 4^4 = 1634
+Input Format :
+Integer n
+Output Format :
+true or false
+Sample Input 1 :
+1
+Sample Output 1 :
+true
+Sample Input 2 :
+103
+Sample Output 2 :
+false                                                
+*/
+
+import java.util.Scanner;
+import java.lang.Math;
+public class Main {
+	public static void main(String[] args)
+	{
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	int k=n;
+	int temp=0;
+	int modulus=0;
+	int store=n;
+	int count =0;
+	double power=0;
+	for(int c=store;c>=1;c--)
+	{
+		modulus=store%10;	
+		store=store/10;
+		if(modulus >0)
+		{
+		count++;
+		}
+	}
+	for(int i=n;i>=1;i--)
+	{
+		temp=n%10;
+		if(temp>=0)
+		{
+		power= (double)(power+Math.pow(temp,count));
+		}
+		n=n/10;
+		temp=0;
+	}
+	if(power==k)
+	{
+		System.out.print(true);
+	}
+	else
+	{
+		System.out.print(false);
+	}
+	sc.close();
+	}
+}
