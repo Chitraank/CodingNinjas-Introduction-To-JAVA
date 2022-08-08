@@ -21,22 +21,26 @@ Sample Input 2 :
 Sample Output 2 :
 111
 */
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+import java.util.Scanner;
 
-import java.util.*;
 public class Main {
 	
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-        int num=sc.nextInt();
-        int rem=0;
-        int pv=1;
-        int ans=0;
-        while(num>0){
-            rem=num%2;
-            ans+=rem*pv;
-            pv*=10;
-            num/=2;
+		Scanner sc =new Scanner(System.in);
+        int n = sc.nextInt();
+        for(int i =17;i>=0;i--)
+        {
+        	int r = n>>i;
+        	
+        	if((r&1)>0)
+        	{System.out.print("1");
+        	
+        	}
+        	else {
+        		System.out.print("0");
+        	}
         }
-        System.out.print(ans);
-    }
+        
+	}
 }
